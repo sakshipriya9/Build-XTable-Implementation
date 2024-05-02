@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './XTable.css';
 
 const initialData = [
   { date: "2022-09-01", views: 100, article: "Article 1" },
@@ -32,10 +33,12 @@ const XTable = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Date and Views Table</h1>
-      <button onClick={sortByDate}>Sort by Date</button>
-      <button onClick={sortByViews}>Sort by Views</button>
+      <div className="button-container">
+        <button className="sort-button" onClick={sortByDate}>Sort by Date</button>
+        <button className="sort-button" onClick={sortByViews}>Sort by Views</button>
+    </div>
       <table>
         <thead>
           <tr>
